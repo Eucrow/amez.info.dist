@@ -24,7 +24,7 @@ os: linux
 #   may cause associated deployments to fail.
 files:
   - source: /
-    destination: /var/www/amez.info.dist
+    destination: /var/www/amez.info.dist/
   # - source:
   #   destination:
 # For deployments to Amazon Linux, Ubuntu Server, or RHEL instances,
