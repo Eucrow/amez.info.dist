@@ -28,14 +28,50 @@ h3, .works .works__container .work__title {
 p, .works .works__container .work__description {
   font: 1rem "Asap", "Helvetica", "sans-serif"; }
 
-header,
 section {
   background: #FFFFFF; }
 
+header,
+main,
+footer {
+  margin: auto; }
+
+.bkg {
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+.bkg img {
+  width: 100vw;
+  overflow: hidden; }
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d; }
+
+.parallax__layer--base {
+  transform: translateZ(0); }
+
+.parallax__layer--back {
+  transform: translateZ(-5px) scale(6); }
+
 .introduction {
   position: relative;
-  margin-top: 25vh;
-  padding: 25px 0;
+  padding: 25px;
   text-align: center;
   background-color: #FFFFFF; }
   .introduction h1 {
@@ -45,34 +81,24 @@ section {
   .introduction .img_social {
     width: 25px; }
   .introduction .myProfile {
-    border-top: 1px solid #FFAA00;
-    border-bottom: 1px solid #FFAA00;
+    border-top: 1px solid #fcb8b3;
+    border-bottom: 1px solid #fcb8b3;
     padding: 0 5px; }
   .introduction .social {
     padding: 20px 0 10px 0; }
   .introduction .social a {
     padding: 0 12px; }
 
-.background {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 35vh;
-  background-image: url("http://placekitten.com/320/200");
-  background-repeat: no-repeat;
-  background-size: cover; }
-
 .works {
   text-align: center;
-  padding: 30px 0 0 0; }
+  padding: 30px 0; }
   .works .works__container .work {
     padding: 15px 5px; }
     .works .works__container .work__title {
       font: 1.2rem "Oleo Script", "serif"; }
 
 .searchingWork {
-  background-color: #FFAA00;
+  background-color: #fcb8b3;
   margin: 30px 0;
   padding: 20px 5px; }
   .searchingWork p, .searchingWork .works .works__container .work__description, .works .works__container .searchingWork .work__description {
@@ -80,11 +106,12 @@ section {
     text-align: center; }
 
 footer {
-  border-top: 1px solid #FFAA00;
-  border-bottom: 1px solid #FFAA00;
+  border-top: 1px solid #fcb8b3;
+  border-bottom: 1px solid #fcb8b3;
   text-align: center;
-  margin: 20px 0;
-  padding: 10px 0; }
+  margin: 20px auto 20px auto;
+  padding: 10px 0;
+  background-color: #FFFFFF; }
   footer .footer__name {
     font: bold 1rem "Oleo Script", "serif"; }
   footer .footer__contact {
@@ -96,16 +123,21 @@ footer {
 
 @media screen and (min-width: 400px) {
   .introduction {
-    width: 80vw;
-    background-color: #FFAA00;
-    position: relative;
-    margin-top: 25vh; }
+    margin-top: 15vw;
+    background-color: #fcb8b3;
+    position: relative; }
+  .introduction,
+  .searchingWork,
+  header,
+  main,
+  footer {
+    width: 75vw; }
   .works {
-    border-top: 1px solid #FFAA00;
-    border-bottom: 1px solid #FFAA00;
-    margin: 30px 0 0 0; }
+    border-top: 1px solid #fcb8b3;
+    border-bottom: 1px solid #fcb8b3;
+    margin-top: 30px;
+    margin-bottom: 0; }
   .searchingWork {
-    width: 80vw;
     margin-left: auto;
     margin-right: auto;
     padding: 20px; } }
@@ -113,32 +145,49 @@ footer {
 @media screen and (min-width: 768px) {
   html {
     font-size: 18px; }
-  .introduction {
-    width: 70vw; }
+  .introduction,
+  .searchingWork,
+  header,
+  main,
+  footer {
+    width: 65vw; }
   .works__container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly; }
   .work {
-    width: 40%; }
-  .searchingWork {
-    width: 70vw; } }
+    width: 40%; } }
 
 @media screen and (min-width: 1280px) {
   main {
     display: flex;
     flex-wrap: wrap;
     align-items: stretch; }
+  .introduction {
+    margin-top: 10vw; }
+  .introduction,
+  .searchingWork,
   header,
+  main,
   footer {
-    width: 100vw; }
+    width: 60vw; }
   section.works {
     width: 67vw; }
   section.searchingWork {
-    width: 33vw;
     margin-bottom: 0px; }
     section.searchingWork p, section.searchingWork .works .works__container .work__description, .works .works__container section.searchingWork .work__description {
       position: relative;
       top: 50%;
-      transform: translateY(-50%);
       line-height: 1.5rem; } }
+
+@media screen and (min-width: 1800px) {
+  .introduction,
+  .searchingWork,
+  header,
+  main,
+  footer {
+    width: 1200px; }
+  .bkg img {
+    min-height: 100vh;
+    object-fit: cover;
+    object-position: right; } }
