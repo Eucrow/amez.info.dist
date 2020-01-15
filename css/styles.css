@@ -46,7 +46,7 @@ footer {
   overflow: hidden; }
 
 .parallax {
-  perspective: 1px;
+  perspective: 2px;
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto; }
@@ -67,7 +67,7 @@ footer {
   transform: translateZ(0); }
 
 .parallax__layer--back {
-  transform: translateZ(-5px) scale(6); }
+  transform: translateZ(-5px) scale(3.6); }
 
 .introduction {
   position: relative;
