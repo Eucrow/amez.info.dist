@@ -187,6 +187,10 @@ footer {
   main,
   footer {
     width: 1200px; }
+  section.searchingWork {
+    margin-bottom: 0px; }
+    section.searchingWork p, section.searchingWork .works .works__container .work__description, .works .works__container section.searchingWork .work__description {
+      top: auto; }
   .bkg img {
     min-height: 100vh;
     object-fit: cover;
