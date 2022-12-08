@@ -17,3 +17,4 @@ jobs:
         protocol: ftps
         port: 22
         server-dir: html/
+        timeout: 60000
