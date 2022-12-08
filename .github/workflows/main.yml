@@ -13,5 +13,5 @@ jobs:
       with:
         server: ftp.amez.online
         username: amez.online
-        password: ${{ ftp_password }}
+        password: ${{ secrets.ftp_password }}
         port: 22
